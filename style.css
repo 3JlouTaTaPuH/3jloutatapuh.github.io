@@ -3,8 +3,10 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
+/* Фон фиксированный */
 body {
   background-color: #1c5b31;
   background-image: radial-gradient(
@@ -13,28 +15,31 @@ body {
     rgba(28, 91, 49, 0.8) 60%,
     rgba(0, 0, 0, 0.8) 100%
   );
-  background-repeat: no-repeat;
+  background-attachment: fixed; /* вот тут важно! */
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 200vh; /* чтобы можно было скроллить */
 }
 
+/* Каждая секция для текста */
 .section {
-  height: 100vh; /* каждая надпись занимает весь экран */
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end; /* начинаем с нижней части экрана */
+  overflow: hidden;
 }
 
-.fade-text {
+.scroll-text {
   font-size: 5rem;
   color: white;
+  transform: translateY(100px); /* начальная позиция снизу */
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
-.fade-text.visible {
+.scroll-text.visible {
+  transform: translateY(0); /* текст всплывает вверх */
   opacity: 1;
-  transform: translateY(0);
 }
