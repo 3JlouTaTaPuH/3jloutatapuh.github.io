@@ -2,35 +2,17 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Мой сайт</title>
-<style>
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    /* основной цвет фона */
-    background-color: #1c5b31;
-
-    /* реалистичная виньетка */
-    background-image: radial-gradient(
-      circle at center,
-      rgba(28, 91, 49, 1) 0%,       /* яркий центр */
-      rgba(28, 91, 49, 0.8) 60%,    /* плавное затемнение */
-      rgba(0, 0, 0, 0.8) 100%       /* тёмные края */
-    );
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    /* чтобы фон всегда занимал весь экран */
-    min-height: 100vh;
-  }
-</style>
+<title>Анимация надписей</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="section">
+    <h1 class="fade-text">Мы</h1>
+  </div>
+  <div class="section">
+    <h1 class="fade-text">Они</h1>
+  </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
