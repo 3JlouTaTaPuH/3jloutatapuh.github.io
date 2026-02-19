@@ -15,6 +15,7 @@ body {
   overflow: hidden;
 }
 
+/* --- Конверт --- */
 .envelope {
   width: 220px;
   height: 140px;
@@ -26,6 +27,7 @@ body {
   transition: transform 0.6s ease;
 }
 
+/* --- Клапан конверта --- */
 .envelope::before {
   content: "";
   position: absolute;
@@ -39,6 +41,7 @@ body {
   border-radius: 4px;
 }
 
+/* --- Письмо (изначально скрыто) --- */
 .letter {
   position: absolute;
   width: 200px;
@@ -48,22 +51,26 @@ body {
   left: 10px;
   text-align: center;
   padding-top: 30px;
-  transform: translateY(100%);
+  transform: translateY(100%); /* полностью вниз — скрыто */
   transition: transform 0.6s ease;
   border-radius: 6px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
   font-size: 16px;
   line-height: 1.4;
+  opacity: 0; /* дополнительно скрываем */
 }
 
+/* --- Когда открыт --- */
 .open .letter {
   transform: translateY(0);
+  opacity: 1; /* становится видимым */
 }
 
 .open::before {
   transform: rotateX(180deg);
 }
 
+/* --- Заголовки и текст письма --- */
 .letter h3 {
   margin: 0;
   font-size: 24px;
@@ -75,6 +82,7 @@ body {
   color: #333;
 }
 
+/* --- Лёгкая анимация при наведении --- */
 .envelope:hover {
   transform: translateY(-5px) scale(1.05);
 }
