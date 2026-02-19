@@ -1,18 +1,43 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>Приглашение</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click2Invite - Наш путь</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="section">
-    <h1 class="scroll-text">Мы</h1>
-  </div>
-  <div class="section">
-    <h1 class="scroll-text">Они</h1>
-  </div>
 
-<script src="script.js"></script>
+<header>
+    <h1>Наш путь</h1>
+</header>
+
+<section class="map-section">
+    <h2>Как нас найти</h2>
+    <p>Нажмите на кнопку ниже, чтобы построить маршрут:</p>
+    <a class="btn" href="https://2gis.ru/krasnoyarsk/firm/985690700549604?immersive=on" target="_blank">Построить маршрут</a>
+</section>
+
+<section class="form-section">
+    <h2>Свяжитесь с нами</h2>
+    <form id="contactForm">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="email" name="email" placeholder="Ваш Email" required>
+        <input type="tel" name="phone" placeholder="Ваш телефон" required>
+        <textarea name="message" rows="5" placeholder="Ваше сообщение" required></textarea>
+        <button type="submit" class="btn">Отправить</button>
+    </form>
+</section>
+
+<section class="contact-section">
+    <h2>Контакты</h2>
+    <p>Телефон для связи: <strong>8999999999</strong></p>
+</section>
+
+<footer>
+    &copy; 2026 Click2Invite
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
