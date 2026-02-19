@@ -1,0 +1,40 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #1c5b31;
+  background-image: radial-gradient(
+    circle at center,
+    rgba(28, 91, 49, 1) 0%,
+    rgba(28, 91, 49, 0.8) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.section {
+  height: 100vh; /* каждая надпись занимает весь экран */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fade-text {
+  font-size: 5rem;
+  color: white;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
